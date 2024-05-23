@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-
+  <meta charset="UTF-8">
 	<title>Nestor Fleitas</title>
 
 	<!-- Bootstrap core CSS -->
@@ -35,6 +35,11 @@
 </head>
 
 <body>
+  <!-- Language Switcher -->
+  <div class="language-switcher">
+    <img id="flag-es" src="assets/images/argentina-flag.png" alt="Español" style="cursor:pointer; width:30px;">
+    <img id="flag-en" src="assets/images/us-flag.png" alt="English" style="cursor:pointer; width:30px;">
+  </div>
 	<!-- Preloader -->
 	<div id="tt-preloader">
 		<div id="pre-status">
@@ -42,28 +47,28 @@
 		</div>
 	</div>
 
-	<!-- Home Section -->
-	<section id="home" class="tt-fullHeight" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
-		<div class="intro">
-			<div class="intro-sub">Nestor Fleitas</div>
-			<h1>DEVOPS -<span> DEVSECOPS </span></h1>
-			<!-- <p>Soy un estudiante de Ingeniería Informática de la Universidad de Buenos Aires<br> Actualmente trabajo en Techint como desarrollador .NET.</p> -->
 
-      <div class="social-icons">
-        <ul class="list-inline">
-          <li><a target="_blank" href="https://www.facebook.com/ndf14685"><i class="fa fa-facebook"></i></a></li>
-          <li><a target="_blank" href="https://www.linkedin.com/in/ndf14685/"><i class="fa fa-linkedin"></i></a></li>
-          <li><a target="_blank" href="https://github.com/ndf14685"><i class="fa fa-github"></i></a></li>
-          <li><a href="mailto:david.fleitas@gmail.com"><i class="fa fa-inbox"></i></a></li>
-          <li><a target="_blank" href="https://www.instagram.com/nestorfleitas.ar/"><i class="fa fa-instagram"></i></a></li>
-        </ul>
-      </div> <!-- /.social-icons -->
-		</div>
+<!-- Home Section -->
+<section id="home" class="tt-fullHeight" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
+  <div class="intro">
+    <div class="intro-sub">Nestor Fleitas</div>
+    <h1>DEVOPS -<span> DEVSECOPS </span></h1>
+    <div class="social-icons">
+      <ul class="list-inline">
+        <li><a target="_blank" href="https://www.facebook.com/ndf14685"><i class="fa fa-facebook"></i></a></li>
+        <li><a target="_blank" href="https://www.linkedin.com/in/ndf14685/"><i class="fa fa-linkedin"></i></a></li>
+        <li><a target="_blank" href="https://github.com/ndf14685"><i class="fa fa-github"></i></a></li>
+        <li><a href="mailto:david.fleitas@gmail.com"><i class="fa fa-inbox"></i></a></li>
+        <li><a target="_blank" href="https://www.instagram.com/nestorfleitas.ar/"><i class="fa fa-instagram"></i></a></li>
+      </ul>
+    </div>
+  </div>
 
-		<div class="mouse-icon">
-			<div class="wheel"></div>
-		</div>
-	</section><!-- End Home Section -->
+  <div class="mouse-icon">
+    <div class="wheel"></div>
+  </div>
+</section>
+<!-- End Home Section -->
 
 
 
@@ -98,92 +103,69 @@
 	</header><!-- End Navigation -->
 
 
-    <!-- About Section -->
-    <section id="about" class="about-section section-padding">
-      <div class="container">
-        <h2 class="section-title wow fadeInUp">About Me</h2>
-
-        <div class="row">
-
-          <div class="col-md-4 col-md-push-8">
-            <div class="biography">
-              <div class="myphoto">
-                <img src="assets/images/myphoto.jpg" alt="">
-              </div>
-              <ul>
-                <li><strong>Nombre:</strong> Nestor Fleitas</li>
-                <li><strong>Fecha de Nacimiento:</strong> 14/06/1985</li>
-                <li><strong>Dirección:</strong> Capital Federal, Argentina</li>
-                <li><strong>Nacionalidad:</strong> Argentino</li>
-                <li><strong>Celular:</strong> (011) 3074-8591</li>
-                <li><strong>Email:</strong> david.fleitas@gmail.com</li>
-              </ul>
+  <!-- About Section -->
+  <section id="about" class="about-section section-padding">
+    <div class="container">
+      <h2 class="section-title wow fadeInUp" data-lang="about-title">About Me</h2>
+      <div class="row">
+        <div class="col-md-4 col-md-push-8">
+          <div class="biography">
+            <div class="myphoto">
+              <img src="assets/images/myphoto.jpg" alt="">
             </div>
-          </div> <!-- col-md-4 -->
-
-          <div class="col-md-8 col-md-pull-4">
-            <div class="short-info wow fadeInUp">
-              <h3>¿Quién soy?</h3>
-              
-              <li>Apasionado por la tecnología. Emprendedor constante. Empático y proactivo. Me considero una persona inquieta por aprender. Facilidad para enseñar, explicar y guiar en el aprendizaje a quien me lo permite. Experimentado en desarrollo Java, actualmente conociendo el mundo Cloud </li>
-              
-            </div>
-
-            <div class="short-info wow fadeInUp">
-              <h3>Aptitudes</h3>
-              <ul class="list-check">
-                <li>Technology Architect - DEVSECOPS</li>
-                <li>Devops</li>
-                <li>SysAdmin</li>
-                <li>SOA Developer</li>
-                <li>Java Fullstack Developer</li>
-                <li>English Intermediate</li>
-                
-              </ul>
-            </div>
-
-            <div class="short-info wow fadeInUp">
-              <h3>Herramientas y Tecnologías</h3>
-              <ul class="list-check">
-                <li>Docker, Kubernetes,Terraform, Ansible</li>
-                <li>Jenkins, Gitlab CI</li>
-                <li>GCP, AWS, Azure</li>
-                <li>Javascript, JQuery</li>
-                <li>Git</li>
-                <li>SQL</li>
-                <li>Java, Python, Shellscripting</li>
-                <li>HTML, CSS</li>
-                <li>Linux</li>
-                
-                <li>Weblogic / Nginx /Tomcat / Jboss</li>
-                
-              </ul>
-            </div>
-
-            <!--<div class="short-info wow fadeInUp">
-              <h3>Logros y Certificaciones</h3>
-              <ul class="list-check">
-                <li>First Certificate Exam (Cambridge)</li>
-                <li>Excel Avanzado (UTN)</li>
-                <li>Estudios Matemáticos (IB)
-              </ul>
-            </div>
-            -->
-            <div class="my-signature">
-              <img src="assets/images/sign.png" alt="">
-            </div>
-
-            <div class="download-button">
-              <a class="btn btn-info btn-lg" href="mailto:david.fleitas@gmail.com"><i class="fa fa-paper-plane"></i>Enviarme un mail</a>
-              <a class="btn btn-primary btn-lg" href="assets/cv.pdf" download><i class="fa fa-download"></i>Descargar mi CV</a>
-	            <a class="btn btn-primary btn-lg" href="assets/cvIngles.pdf" download><i class="fa fa-download"></i>Download my Resume</a>
-            </div>
+            <ul>
+              <li><strong data-lang="name">Name:</strong> Nestor Fleitas</li>
+              <li><strong data-lang="dob">Date of Birth:</strong> 14/06/1985</li>
+              <li><strong data-lang="address">Address:</strong> Chubut - Argentina</li>
+              <li><strong data-lang="nationality">Nationality:</strong> Argentinian</li>
+              <li><strong data-lang="phone">Phone:</strong> (011) 3074-8591</li>
+              <li><strong data-lang="email">Email:</strong> david.fleitas@gmail.com</li>
+            </ul>
           </div>
-
-
-        </div> <!-- /.row -->
-      </div> <!-- /.container -->
-    </section><!-- End About Section -->
+        </div>
+        <div class="col-md-8 col-md-pull-4">
+          <div class="short-info wow fadeInUp">
+            <h3 data-lang="who-am-i">Who am I?</h3>
+            <p data-lang="who-am-i-text">
+              Passionate about technology. Constant entrepreneur. Empathetic and proactive. I consider myself a person eager to learn. Ease of teaching, explaining and guiding those who allow me. Experienced in Java development, I am currently exploring the Cloud world.
+            </p>
+          </div>
+          <div class="short-info wow fadeInUp">
+            <h3 data-lang="skills">Skills</h3>
+            <ul class="list-check">
+              <li data-lang="skill1">Technology Architect - DEVSECOPS</li>
+              <li data-lang="skill2">Devops</li>
+              <li data-lang="skill3">SysAdmin</li>
+              <li data-lang="skill4">SOA Developer</li>
+              <li data-lang="skill5">Java Fullstack Developer</li>
+              <li data-lang="skill6">English Intermediate</li>
+            </ul>
+          </div>
+          <div class="short-info wow fadeInUp">
+            <h3 data-lang="tools">Tools and Technologies</h3>
+            <ul class="list-check">
+              <li>Docker, Kubernetes, Terraform, Ansible</li>
+              <li>Jenkins, Gitlab CI</li>
+              <li>GCP, AWS, Azure</li>
+              <li>Javascript, JQuery</li>
+              <li>Git</li>
+              <li>SQL</li>
+              <li>Java, Python, Shellscripting</li>
+              <li>HTML, CSS</li>
+              <li>Linux</li>
+              <li>Weblogic / Nginx /Tomcat / Jboss</li>
+            </ul>
+          </div>
+          <div class="download-button">
+            <a class="btn btn-info btn-lg" href="mailto:david.fleitas@gmail.com"><i class="fa fa-paper-plane"></i><span data-lang="send-email">Send me an email</span></a>
+            <a class="btn btn-primary btn-lg" href="assets/cv.pdf" download><i class="fa fa-download"></i><span data-lang="download-cv">Download my CV</span></a>
+            <a class="btn btn-primary btn-lg" href="assets/cvIngles.pdf" download><i class="fa fa-download"></i><span data-lang="download-resume">Download my Resume</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End About Section -->
 
 
     <!-- Hire Section -->
@@ -777,11 +759,40 @@
                     </div>
                     <div class="resume">
                         <ul class="timeline">
+
+<!-- CLARIN - AGEA -->
+<li>
+  <div class="posted-date">
+    <span class="month">OCT . 2022 - MAR . 2024</span>
+  </div><!-- /posted-date -->
+
+  <div class="timeline-panel wow fadeInUp">
+      <div class="timeline-content">
+          <div class="timeline-heading">
+              <h3>CLARIN - AGEA
+              <img src="assets/images/clarin.png" alt="Responsive image" style="width: 25%" class="img-thumbnail">
+              </h3>
+              <h5>Data & Cloud Engineer</h5>
+              
+          </div><!-- /timeline-heading -->
+
+          <div class="timeline-body">
+              <p>Integracion de GCP con Elastic Cloud;
+                Pubsub; Dataflow; Airflow;
+                Docker; Kubernetes; Desarrollo de conector
+                Java; AWS EKS VPC ELB, Cdk, implementacion
+                de microservicios node
+                </p>
+          </div><!-- /timeline-body -->
+      </div> <!-- /timeline-content -->
+  </div><!-- /timeline-panel -->
+</li>
+
 <!-- INGENIA -->
 
                                 <li class="timeline-inverted">
                                   <div class="posted-date">
-                                    <span class="month">MAY . 2022 - SEPT - 2022</span>
+                                    <span class="month">MAY . 2022 - SEPT . 2022</span>
                                   </div><!-- /posted-date -->
 
                                   <div class="timeline-panel wow fadeInUp">
@@ -806,31 +817,34 @@
 
                           
 <!-- FLUX IT -->
+<li>
+  <div class="posted-date">
+    <span class="month">JUL . 2021 - ABRIL 2022</span>
+  </div><!-- /posted-date -->
 
-                              <li class="timeline-inverted">
-                                <div class="posted-date">
-                                  <span class="month">FEB . 2020 - JUL . 2021</span>
-                                </div><!-- /posted-date -->
+  <div class="timeline-panel wow fadeInUp">
+      <div class="timeline-content">
+          <div class="timeline-heading">
+              <h3>FLUX IT
+              <img src="assets/images/logo-FluxIT.png" alt="Responsive image" style="width: 25%" class="img-thumbnail">
+              </h3>
+              <h5>DEVOPS MOBILE</h5>
+              
+          </div><!-- /timeline-heading -->
 
-                                <div class="timeline-panel wow fadeInUp">
-                                    <div class="timeline-content">
-                                        <div class="timeline-heading">
-                                            <h3>Equifax</h3>
-                                            <h5>SRE - DevOps</h5>
-                                            <span>Lavalle 333 - CABA</span>
-                                        </div><!-- /timeline-heading -->
+          <div class="timeline-body">
+              <p>DevOps GCP, AWS, AZURE, con manejo de
+                herramientas más comunes como Docker,
+                Jenkins. Azure Devops para la
+                implementacion de CI/CD de app Android y
+                IOS. Integracion con Sonarqube,
+                Browserstack;
+                </p>
+          </div><!-- /timeline-body -->
+      </div> <!-- /timeline-content -->
+  </div><!-- /timeline-panel -->
+</li>
 
-                                        <div class="timeline-body">
-                                            <p>Site Reliability Engineer
-                                            <br>DevOps con manejo de herramientas más comunes como Docker, 
-                                            <br>Ansible, Apache Http Server, Apache Tomcat 7 y 8, 
-                                            <br>monitoreo y supervisión con Nagios Core,
-                                            <br> Linux (Red Hat), Apache Web Server, Bash Scripting,  
-                                            <br> Nginx, Python scripting, balanceo de carga, manejo y configuración de Jenkins, Terraform y kubernetes en google cloud.</p>
-                                        </div><!-- /timeline-body -->
-                                    </div> <!-- /timeline-content -->
-                                </div> <!-- /timeline-panel -->
-                            </li>
 <!-- EQUIFAX -->
 
                             <li class="timeline-inverted">
@@ -1194,7 +1208,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="copyright text-center">
-              <p> <a target="_blank" href="https://dream-doit.com">&copy; Dream & Do IT 2021. All rights reserved </a></p>
+              <p> <a target="_blank" href="https://dream-doit.com">&copy; Dream & Do IT 2024. All rights reserved </a></p>
             </div>
           </div>
         </div>
@@ -1223,6 +1237,7 @@
   <script src="assets/js/jquery.magnific-popup.min.js"></script>
   <script src="assets/js/jquery.fitvids.js"></script>
   <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/lang.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
 </body>
 </html>
