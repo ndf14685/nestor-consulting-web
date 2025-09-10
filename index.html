@@ -118,7 +118,7 @@
               <li><strong data-lang="dob">Date of Birth:</strong> 14/06/1985</li>
               <li><strong data-lang="address">Address:</strong> Chubut - Argentina</li>
               <li><strong data-lang="nationality">Nationality:</strong> Argentinian</li>
-              <li><strong data-lang="phone">Phone:</strong> TELEFONO (011) 3074-8591</li>
+              <li><strong data-lang="phone">Phone:</strong> <span id="phone"></span></li>
               <li><strong data-lang="email">Email:</strong> david.fleitas@gmail.com</li>
             </ul>
           </div>
@@ -1239,5 +1239,13 @@
   <script src="assets/js/scripts.js"></script>
   <script src="assets/js/lang.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+  <script>
+    const countryCode = "+54";
+    const area = "011";
+    const number = "3074";
+    const suffix = "8591";
+    const phoneNumber = `(${countryCode}) ${area}) ${number}-${suffix}`;
+    document.getElementById("phone").textContent = phoneNumber;
+  </script>
 </body>
 </html>
