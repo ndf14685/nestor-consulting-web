@@ -46,12 +46,17 @@ jQuery(function ($) {
     // -------------------------------------------------------------
 
     (function () {
-        $('a[href*=#]').bind("click", function(e){
-            var anchor = $(this);
-            $('html, body').stop().animate({
-                scrollTop: $(anchor.attr('href')).offset().top
-            }, 1000);
-            e.preventDefault();
+        $('a[href^="#"]').on('click', function(e){
+            var target = this.getAttribute('href');
+            if (target && target.length > 1) {
+                var $el = $(target);
+                if ($el.length) {
+                    e.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: $el.offset().top
+                    }, 1000);
+                }
+            }
         });
     }());
 
@@ -79,10 +84,23 @@ jQuery(function ($) {
             topSpacing: 0
         });
 
-        $('body').scrollspy({
-            target: '.navbar-custom',
-            offset: 70
-        })
+        try {
+            if ($.fn && $.fn.scrollspy) {
+                // Bootstrap <=4 jQuery plugin
+                $('body').scrollspy({
+                    target: '.navbar-custom',
+                    offset: 70
+                });
+            } else if (window.bootstrap && window.bootstrap.ScrollSpy) {
+                // Bootstrap 5 native API
+                new bootstrap.ScrollSpy(document.body, {
+                    target: '.navbar-custom',
+                    offset: 70
+                });
+            }
+        } catch (e) {
+            // no-op if ScrollSpy not available
+        }
     }());
 
 

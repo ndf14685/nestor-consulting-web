@@ -32,7 +32,7 @@
 body{
     position: relative;
     z-index: -2;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     line-height: 28px;
     font-weight: 300;
     font-size: 14px;
@@ -516,6 +516,8 @@ SOCIAL ICON
     font-weight: 700;
     font-size: 18px;
 }
+/* Active link highlight for Bootstrap 5 */
+.navbar-custom .navbar-nav .nav-link.active { color: #68c3a3; }
 
 .navbar-custom .nav .open > a,
 .navbar-custom .dropdown-menu > li > a:hover,
@@ -523,9 +525,14 @@ SOCIAL ICON
     background: #f5f5f5;
 }
 
-.navbar-custom .navbar-toggle .icon-bar {
+.navbar-custom .navbar-toggler .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
     background: #222;
+    margin: 5px 0;
 }
+body.dark .navbar-custom .navbar-toggler .icon-bar { background: #e2e8f0; }
 
 
 
@@ -1806,3 +1813,96 @@ Icon for all respective meta
     padding: 5px;
     box-shadow: 0 0px 0px 1px #eee;
 }
+
+/* Theme toggle button */
+.theme-toggle {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    z-index: 1000;
+}
+.theme-toggle .btn {
+    padding: 6px 10px;
+    line-height: 1;
+}
+.theme-toggle i { font-size: 16px; }
+
+/* === Dark Mode Overrides === */
+/* Apply by adding class "dark" to body */
+body.dark {
+    background-color: #0b0f14;
+    color: #e2e8f0;
+}
+
+/* Links */
+body.dark a { color: #68c3a3; }
+body.dark a:hover, body.dark a:focus { color: #8ee0c4; }
+
+/* Header & Navbar */
+body.dark .header {
+    background: #0f141a;
+    border-bottom: 1px solid #1f2937;
+}
+body.dark .header::after { border-bottom: 1px solid #1f2937; }
+body.dark .navbar-custom,
+body.dark .navbar-custom .dropdown-menu {
+    background: #0f141a;
+}
+body.dark .navbar-custom .navbar-nav > li > a,
+body.dark .navbar-custom .dropdown-menu > li > a { color: #cbd5e1; }
+body.dark .navbar-custom .dropdown-menu { border-color: #24303f; border-bottom-color: #24303f; background-color: #0f141a; }
+body.dark .navbar-custom .dropdown-menu > li { border-bottom: 1px solid #1f2937; }
+body.dark .navbar-custom .nav li a:hover,
+body.dark .navbar-custom .nav li a:focus,
+body.dark .navbar-custom .navbar-nav > li.active > a { color: #68c3a3; }
+body.dark .navbar-custom .navbar-toggle .icon-bar { background: #e2e8f0; }
+
+/* Section titles */
+body.dark .section-title { color: #e2e8f0; }
+
+/* About */
+body.dark .about-section { background: #0f141a; }
+body.dark .biography { border-color: #2a2f37; }
+body.dark .biography::after { border-bottom-color: #2a2f37; }
+body.dark .biography ul li { border-bottom-color: #2a2f37; }
+
+/* Resume/Timeline */
+@media(min-width:992px) {
+  body.dark .timeline>li .timeline-panel { border: 1px solid #1f2937; }
+  body.dark .timeline-content { background-color: #111823; }
+  body.dark .timeline-content::after { border-color: #1f2937; }
+  body.dark .timeline>li .timeline-panel::before { border-left-color: #1f2937; }
+  body.dark .timeline>li.timeline-inverted .timeline-panel::before { border-right-color: #1f2937; }
+  body.dark .timeline>li .timeline-panel::after { border-left-color: #111823; }
+  body.dark .timeline>li.timeline-inverted .timeline-panel::after { border-right-color: #111823; }
+  body.dark .timeline>li .posted-date { background-color: #0f141a; }
+  body.dark .timeline>li .posted-date .month { color: #e2e8f0; }
+}
+
+/* Skills */
+/* already dark background; ensure text contrast */
+body.dark .skills-section { background-color: #0f141a; color: #e2e8f0; }
+body.dark .progress { background-color: #24303f; }
+
+/* Works/Portfolio */
+body.dark .works-section { background-color: #0f141a; }
+body.dark .portfolio-bg { background: #111823; border: 1px solid #1f2937; border-bottom-color: #1f2937; }
+body.dark .links a i { color: #68c3a3; }
+body.dark .links a i::after { border-color: #68c3a3; }
+
+/* Blog cards, map frames, wrappers */
+body.dark .blog-post-wrapper,
+body.dark .location-map { border-color: #1f2937; border-bottom-color: #1f2937; }
+
+/* Forms */
+body.dark .form-control { background-color: #111823; border-color: #1f2937; color: #e2e8f0; }
+body.dark .form-control:focus { border-color: #68c3a3; }
+
+/* Buttons keep brand colors; ensure default contrast */
+body.dark .btn-default { border-color: #cbd5e1; color: #cbd5e1; }
+body.dark .btn-default:hover, body.dark .btn-default:focus { color: #1a202c; background-color: #cbd5e1; border-color: #cbd5e1; }
+
+/* Footer already dark */
+
+/* Preloader */
+body.dark #tt-preloader { background: #0b0f14; }
