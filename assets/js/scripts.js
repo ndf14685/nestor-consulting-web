@@ -124,7 +124,7 @@ jQuery(function ($) {
     // -------------------------------------------------------------
     // Countup
     // -------------------------------------------------------------
-    $('.count-wrap').bind('inview', function(event, visible, visiblePartX, visiblePartY) {
+    $('.count-wrap').on('inview', function(event, visible, visiblePartX, visiblePartY) {
         if (visible) {
             $(this).find('.timer').each(function () {
                 var $this = $(this);
@@ -145,7 +145,7 @@ jQuery(function ($) {
     // Progress Bar
     // -------------------------------------------------------------
  
-    $('.skill-progress').bind('inview', function(event, visible, visiblePartX, visiblePartY) {
+    $('.skill-progress').on('inview', function(event, visible, visiblePartX, visiblePartY) {
         if (visible) {
             $.each($('div.progress-bar'),function(){
                 $(this).css('width', $(this).attr('aria-valuenow')+'%');
@@ -157,7 +157,7 @@ jQuery(function ($) {
     // -------------------------------------------------------------
     // More skill
     // -------------------------------------------------------------
-    $('.more-skill').bind('inview', function(event, visible, visiblePartX, visiblePartY) {
+    $('.more-skill').on('inview', function(event, visible, visiblePartX, visiblePartY) {
         if (visible) {
             $('.chart').easyPieChart({
                 //your configuration goes here
@@ -266,7 +266,7 @@ jQuery(function ($) {
     // STELLAR FOR BACKGROUND SCROLLING
     // -------------------------------------------------------------
 
-    $(window).load(function() {
+    $(window).on('load', function() {
 
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
          
