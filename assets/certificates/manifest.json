@@ -1,0 +1,26 @@
+[
+  {
+    "id": "aws-cloud-practitioner",
+    "name": "AWS Certified Cloud Practitioner",
+    "issuer": "Amazon Web Services",
+    "date": "2023-05-10",
+    "logo": "aws-cloud-practitioner.png",
+    "url": "https://www.credly.com/badges/REEMPLAZAR-CON-TU-URL"
+  },
+  {
+    "id": "devsecops-professional",
+    "name": "Certified DevSecOps Professional",
+    "issuer": "Practical DevSecOps",
+    "date": "2024-01-15",
+    "logo": "devsecops-professional.png",
+    "url": "https://verify.example.com/TU-CERTIFICADO"
+  },
+  {
+    "id": "cybersec-technician",
+    "name": "Cybersec Technician",
+    "issuer": "[Issuer]",
+    "date": "2022-08-20",
+    "logo": "cybersec-technician.png"
+  }
+]
+
