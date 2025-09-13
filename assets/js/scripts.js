@@ -267,16 +267,20 @@ jQuery(function ($) {
     // -------------------------------------------------------------
 
     $(window).on('load', function() {
-
-        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-         
-        }else {
-            $.stellar({
-                horizontalScrolling: false,
-                responsive: true
-            });
+        // Parallax (Stellar) puede romper con jQuery 3 en algunos entornos.
+        // Solo inicializamos si la API está disponible y no hay reducción de movimiento.
+        var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var onMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        try {
+            if (!reduce && !onMobile && window.jQuery && jQuery.fn && typeof jQuery.fn.stellar === 'function') {
+                jQuery.stellar({
+                    horizontalScrolling: false,
+                    responsive: true
+                });
+            }
+        } catch (e) {
+            // Si falla, lo omitimos para no bloquear el resto de los scripts
         }
-
     });
 
 

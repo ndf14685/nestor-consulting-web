@@ -872,8 +872,8 @@ Resume Timeline
 /* Resume: interactive expand/collapse for details */
 .timeline-panel { cursor: pointer; transition: transform 180ms ease, box-shadow 180ms ease; }
 .timeline-panel:hover { transform: scale(1.02); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
-.timeline-panel .timeline-body { max-height: 0; overflow: hidden; transition: max-height 260ms ease; }
-.timeline-panel.expanded .timeline-body { max-height: 800px; }
+.timeline-panel .timeline-body { max-height: 0; overflow: hidden; transition: max-height 260ms ease, opacity 200ms ease; opacity: 0; display: block; }
+.timeline-panel.expanded .timeline-body { max-height: 800px; opacity: 1; }
 @media (prefers-reduced-motion: reduce) {
   .timeline-panel { transition: none; }
   .timeline-panel:hover { transform: none; box-shadow: none; }
