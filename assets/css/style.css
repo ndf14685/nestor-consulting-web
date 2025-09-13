@@ -107,6 +107,7 @@ h1, h2, h3, h4, h5, h6{
     font-weight: 700;
     margin:0;
     text-transform: uppercase;
+    font-family: 'Poppins', 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 }
 
 h1 {
@@ -451,7 +452,7 @@ SOCIAL ICON
     border-radius: 0;
     margin: 0;
     text-transform: uppercase;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto', 'Inter', system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif;
 }
 
 
@@ -866,6 +867,17 @@ Resume Timeline
     -moz-transition:all 400ms;
     -o-transition:all 400ms;
     transition: all 400ms;
+}
+
+/* Resume: interactive expand/collapse for details */
+.timeline-panel { cursor: pointer; transition: transform 180ms ease, box-shadow 180ms ease; }
+.timeline-panel:hover { transform: scale(1.02); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+.timeline-panel .timeline-body { max-height: 0; overflow: hidden; transition: max-height 260ms ease; }
+.timeline-panel.expanded .timeline-body { max-height: 800px; }
+@media (prefers-reduced-motion: reduce) {
+  .timeline-panel { transition: none; }
+  .timeline-panel:hover { transform: none; box-shadow: none; }
+  .timeline-panel .timeline-body { transition: none; }
 }
 
 .timeline-content::after{
@@ -1519,6 +1531,36 @@ Icon for all respective meta
     padding: 36px 0;
     color: #fff;
   
+}
+
+/* Certificates carousel */
+.cert-carousel .carousel-inner {
+    padding: 10px 0 30px;
+}
+.cert-carousel img {
+    max-height: 140px;
+    width: auto;
+}
+.cert-carousel .thumb { 
+    transition: transform 200ms ease;
+}
+.cert-carousel .thumb:hover {
+    transform: scale(1.06);
+}
+.cert-carousel .carousel-item{
+    text-align: center;
+}
+.cert-carousel .carousel-caption{
+    position: static; /* coloca el caption debajo de la imagen */
+    padding: 8px 0 0;
+    background: transparent;
+    color: inherit;
+}
+.cert-carousel .carousel-caption h5 {
+    font-weight: 700;
+}
+.cert-carousel .carousel-caption p {
+    margin: 0;
 }
 .copyright p {
     margin: 0;

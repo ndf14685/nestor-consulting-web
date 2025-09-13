@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -37,7 +37,7 @@
   <link href="assets/css/responsive.css" rel="stylesheet">
   <!-- Modern font -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
   <script type="application/ld+json">
   {
@@ -218,11 +218,23 @@
   <section id="certifications" class="section-padding">
     <div class="container">
       <h2 class="section-title wow fadeInUp">Certificaciones</h2>
-      <ul>
-        <li>AWS Cloud Practitioner </li>
+      <!-- Fallback SEO-first list (visible sin JS) -->
+      <ul id="cert-fallback">
+        <li>Amazon Web Services — AWS Certified Cloud Practitioner</li>
+        <li>Practical DevSecOps — Certified DevSecOps Professional</li>
         <li>Cybersec Technician</li>
-        <li>Certified DevSecOps Professional</li>
       </ul>
+
+      <!-- Carousel: se pobla vía manifest si existe -->
+      <div id="cert-carousel" class="carousel slide cert-carousel" data-bs-ride="carousel" data-bs-interval="4000" aria-roledescription="carousel">
+        <div class="carousel-inner" id="cert-carousel-inner"></div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#cert-carousel" data-bs-slide="prev" aria-label="Anterior">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#cert-carousel" data-bs-slide="next" aria-label="Siguiente">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
     </div>
   </section>
   <!-- End Certifications Section -->
@@ -1352,6 +1364,8 @@
   <script src="assets/js/jquery.shuffle.min.js"></script>
   <script src="assets/js/jquery.magnific-popup.min.js"></script>
   <script src="assets/js/jquery.fitvids.js"></script>
+  <script src="assets/js/certifications.js"></script>
+  <script src="assets/js/resume.js"></script>
   <script src="assets/js/scripts.js"></script>
   <script src="assets/js/lang.js"></script>
   <!-- Removed Google Maps API without key for security/billing -->
@@ -1410,3 +1424,4 @@
   </script>
 </body>
 </html>
+
