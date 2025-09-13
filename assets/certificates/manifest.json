@@ -8,19 +8,68 @@
     "url": "https://www.credly.com/badges/REEMPLAZAR-CON-TU-URL"
   },
   {
+    "id": "basic-networking",
+    "name": "Conceptos básicos de redes",
+    "issuer": "Cisco",
+    "date": "2025-07-22",
+    "logo": "basic_network.png",
+    "url": "https://www.netacad.com/es/certificates?issuanceId=0df5598e-16be-4a8b-b57b-fe8fc4582746"
+  },
+  {
+    "id": "junior-cyber",
+    "name": "Junior Cybersecurity Analyst Career Path",
+    "issuer": "Cisco",
+    "date": "2025-07-22",
+    "logo": "junior_cyber.png",
+    "url": "https://www.netacad.com/es/certificates?issuanceId=0df5598e-16be-4a8b-b57b-fe8fc4582746"
+  },
+  {
+    "id": "kali-cyber",
+    "name": "KALI LINUX 101",
+    "issuer": "Academia de Ciberseguridad",
+    "date": "2025-06-17",
+    "logo": "kali-cyber.png",
+    "url": "https://verify.academia-ciberseguridad.com/9EI5KyGDBI"
+  },
+  {
+    "id": "cybersec-introduction",
+    "name": "Introduction to Cybersecurity",
+    "issuer": "Cisco",
+    "date": "2025-06-05",
+    "logo": "intr_sec.png",
+    "url": "https://www.credly.com/badges/dd1d8f1d-a0ad-4bfa-aacb-dc4da95480b5/linked_in_profile"
+  },
+  {
+    "id": "MS-Cyb-Arch-achievement",
+    "name": "Microsoft Cybersecurity Architect (SC100) - Achievement",
+    "issuer": "IT College",
+    "date": "2024-11-27",
+    "logo": "it-collegue.png",
+    "url": "https://credentials.itcollege.com.ar/ba865ec3-59a8-45bd-a7b6-6e1ba7bb9689#acc.zxh5epji"
+  },
+  {
+    "id": "fundamental-hack",
+    "name": "Fundamental of Hacking & Defense",
+    "issuer": "Ekoparty hHackademy",
+    "date": "2024-11-24",
+    "logo": "Hackademy.png",
+    "url": "https://www.credly.com/badges/dd1d8f1d-a0ad-4bfa-aacb-dc4da95480b5/linked_in_profile"
+  },
+  {
+    "id": "Osint-hack",
+    "name": "Ciberinteligencia, Ingenieria Social y Osint",
+    "issuer": "Ekoparty hHackademy",
+    "date": "2024-10-24",
+    "logo": "Hackademy.png",
+    "url": "https://www.credly.com/badges/dd1d8f1d-a0ad-4bfa-aacb-dc4da95480b5/linked_in_profile"
+  },
+  {
     "id": "devsecops-professional",
     "name": "Certified DevSecOps Professional",
     "issuer": "Practical DevSecOps",
     "date": "2024-01-15",
     "logo": "devsecops-professional.png",
     "url": "https://verify.example.com/TU-CERTIFICADO"
-  },
-  {
-    "id": "cybersec-technician",
-    "name": "Cybersec Technician",
-    "issuer": "[Issuer]",
-    "date": "2022-08-20",
-    "logo": "cybersec-technician.png"
   }
 ]
 
