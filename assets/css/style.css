@@ -1532,6 +1532,7 @@ Icon for all respective meta
     color: #fff;
   
 }
+.footer-wrapper .visits img{ height: 20px; margin-top: 8px; }
 
 /* Certificates carousel */
 .cert-carousel .carousel-inner {
