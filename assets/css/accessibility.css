@@ -1,0 +1,306 @@
+/*
+  Accessibility CSS - Mejores prácticas para UX y A11Y
+  Nestor Fleitas Portfolio - 2025
+*/
+
+/* ===== REDUCED MOTION PREFERENCES ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  /* Disable parallax scrolling */
+  [data-stellar-background-ratio] {
+    background-attachment: scroll !important;
+    transform: none !important;
+  }
+}
+
+/* ===== FOCUS STYLES FOR KEYBOARD NAVIGATION ===== */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+[tabindex]:focus {
+  outline: 3px solid #007bff !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25) !important;
+}
+
+/* Specific focus for navigation */
+.nav-link:focus {
+  background-color: rgba(0, 123, 255, 0.1) !important;
+  border-radius: 4px !important;
+}
+
+/* Focus for social icons */
+.social-icons a:focus {
+  transform: scale(1.1) !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 50% !important;
+}
+
+/* Focus for buttons */
+.btn:focus {
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25) !important;
+}
+
+/* Focus for language switcher */
+.language-switcher img:focus {
+  outline: 3px solid #28a745 !important;
+  outline-offset: 2px !important;
+  transform: scale(1.1) !important;
+}
+
+/* ===== HIGH CONTRAST IMPROVEMENTS ===== */
+@media (prefers-contrast: high) {
+  body {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+  }
+  
+  .section-title {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 4px #000000 !important;
+  }
+  
+  .btn {
+    border: 2px solid #ffffff !important;
+  }
+  
+  .progress-bar {
+    background-color: #00ff00 !important;
+  }
+}
+
+/* ===== DARK THEME CONTRAST IMPROVEMENTS ===== */
+body.dark {
+  --text-primary: #ffffff;
+  --text-secondary: #e0e0e0;
+  --bg-primary: #0b0f14;
+  --bg-secondary: #1a1e23;
+  --accent-color: #68c3a3;
+}
+
+body.dark .section-title {
+  color: var(--text-primary) !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8) !important;
+}
+
+body.dark p,
+body.dark li {
+  color: var(--text-secondary) !important;
+}
+
+body.dark .btn-primary {
+  background-color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+  color: #000000 !important;
+}
+
+/* ===== SKIP LINK IMPROVEMENTS ===== */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #007bff;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 9999;
+  border-radius: 0 0 4px 4px;
+  font-weight: bold;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 3px solid #ffffff;
+}
+
+/* ===== SCREEN READER IMPROVEMENTS ===== */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.sr-only-focusable:focus {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  padding: inherit !important;
+  margin: inherit !important;
+  overflow: visible !important;
+  clip: auto !important;
+  white-space: normal !important;
+}
+
+/* ===== IMPROVED CLICK TARGETS ===== */
+/* Ensure all clickable elements meet 44px minimum touch target */
+.social-icons a,
+.language-switcher img,
+#theme-toggle,
+.nav-link {
+  min-width: 44px !important;
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* ===== CAROUSEL ACCESSIBILITY ===== */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 44px !important;
+  height: 44px !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  border-radius: 50% !important;
+  border: 2px solid #ffffff !important;
+}
+
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+  background-color: rgba(0, 123, 255, 0.8) !important;
+}
+
+/* ===== PROGRESS BARS ACCESSIBILITY ===== */
+.progress-bar {
+  position: relative;
+}
+
+.progress-bar span {
+  position: absolute;
+  right: 8px;
+  color: #000000 !important;
+  font-weight: bold !important;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8) !important;
+}
+
+/* ===== FORM ACCESSIBILITY (if forms are added later) ===== */
+.form-control:focus {
+  border-color: #007bff !important;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25) !important;
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .social-icons,
+  .language-switcher,
+  .theme-toggle,
+  .navbar,
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none !important;
+  }
+  
+  .section-title {
+    color: #000000 !important;
+    text-shadow: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  a {
+    color: #000000 !important;
+    text-decoration: underline !important;
+  }
+}
+
+/* ===== ANIMATION SAFETY ===== */
+/* Ensure animations don't cause seizures */
+@keyframes safe-fade {
+  from { opacity: 0.8; }
+  to { opacity: 1; }
+}
+
+.wow {
+  animation-duration: 0.8s !important;
+  animation-fill-mode: both !important;
+}
+
+/* ===== LANGUAGE SUPPORT ===== */
+[lang="es"] {
+  hyphens: auto;
+  word-break: normal;
+}
+
+[lang="en"] {
+  hyphens: auto;
+  word-break: normal;
+}
+
+/* ===== ERROR STATES ===== */
+.error {
+  color: #dc3545 !important;
+  font-weight: bold !important;
+}
+
+.error:focus {
+  outline: 3px solid #dc3545 !important;
+}
+
+/* ===== SUCCESS STATES ===== */
+.success {
+  color: #28a745 !important;
+  font-weight: bold !important;
+}
+
+/* ===== RESPONSIVE TEXT ===== */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  body {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+  }
+  
+  .btn {
+    padding: 12px 16px !important;
+    font-size: 16px !important;
+  }
+}
+
+/* ===== COOKIE CONSENT (if needed) ===== */
+.cookie-consent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #1a1e23;
+  color: #ffffff;
+  padding: 16px;
+  z-index: 9999;
+  border-top: 3px solid #007bff;
+}
+
+.cookie-consent button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-left: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cookie-consent button:focus {
+  outline: 3px solid #ffffff;
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" id="html-root">
 
 <head>
   <meta charset="UTF-8">
@@ -33,6 +33,8 @@
 	<link href="assets/css/magnific-popup.css" rel="stylesheet">
 	<!-- Custom styles CSS -->
 	<link href="assets/css/style.css" rel="stylesheet" media="screen">
+  <!-- Accessibility CSS -->
+  <link href="assets/css/accessibility.css" rel="stylesheet" media="screen">
   <!-- Responsive CSS -->
   <link href="assets/css/responsive.css" rel="stylesheet">
   <!-- Modern font -->
@@ -69,13 +71,13 @@
   <a href="#about" class="skip-link">Skip to main content</a>
   <!-- Language Switcher -->
   <div class="language-switcher" role="group" aria-label="Language switcher">
-    <img id="flag-es" src="assets/images/argentina-flag.png" alt="Español" style="cursor:pointer; width:30px;">
-    <img id="flag-en" src="assets/images/us-flag.png" alt="English" style="cursor:pointer; width:30px;">
+    <img id="flag-es" src="assets/images/argentina-flag.png" alt="Cambiar a español" style="cursor:pointer; width:30px;" tabindex="0">
+    <img id="flag-en" src="assets/images/us-flag.png" alt="Switch to English" style="cursor:pointer; width:30px;" tabindex="0">
   </div>
   <!-- Theme Toggle -->
   <div class="theme-toggle" title="Cambiar tema claro/oscuro">
-    <button id="theme-toggle" aria-label="Cambiar tema" class="btn btn-default btn-sm">
-      <i class="fa fa-moon-o"></i>
+    <button id="theme-toggle" aria-label="Cambiar tema" class="btn btn-default btn-sm" tabindex="0">
+      <i class="fa fa-moon-o" aria-hidden="true"></i>
     </button>
   </div>
 	<!-- Preloader -->
@@ -87,23 +89,23 @@
 
 
 <!-- Home Section -->
-<section id="home" class="tt-fullHeight" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
+<section id="home" class="tt-fullHeight" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2" role="banner" aria-label="Sección principal - presentación">
   <div class="intro">
     
     <div class="intro-sub">Nestor Fleitas</div>
     <h1>DEVOPS - <span> DEVSECOPS </span> Consultant</h1>
-    <div class="social-icons">
+    <div class="social-icons" role="navigation" aria-label="Enlaces a redes sociales">
       <ul class="list-inline">
-        <li><a target="_blank" href="https://www.facebook.com/ndf14685" aria-label="Facebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-        <li><a target="_blank" href="https://www.linkedin.com/in/ndf14685/" aria-label="LinkedIn" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
-        <li><a target="_blank" href="https://github.com/ndf14685" aria-label="GitHub" title="GitHub"><i class="fa fa-github"></i></a></li>
-        <li><a id="email-icon" href="#" aria-label="Email" title="Email"><i class="fa fa-inbox"></i></a></li>
-        <li><a target="_blank" href="https://www.instagram.com/nestorfleitas.ar/" aria-label="Instagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+        <li><a target="_blank" href="https://www.facebook.com/ndf14685" aria-label="Visitar mi perfil de Facebook" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a target="_blank" href="https://www.linkedin.com/in/ndf14685/" aria-label="Visitar mi perfil de LinkedIn" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        <li><a target="_blank" href="https://github.com/ndf14685" aria-label="Visitar mi perfil de GitHub" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+        <li><a id="email-icon" href="#" aria-label="Enviarme un email" title="Email"><i class="fa fa-inbox" aria-hidden="true"></i></a></li>
+        <li><a target="_blank" href="https://www.instagram.com/nestorfleitas.ar/" aria-label="Visitar mi perfil de Instagram" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
       </ul>
     </div>
   </div>
 
-  <div class="mouse-icon">
+  <div class="mouse-icon" aria-hidden="true">
     <div class="wheel"></div>
   </div>
 </section>
@@ -124,11 +126,11 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="custom-collapse">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+                    <ul class="navbar-nav ms-auto" role="menubar">
+                        <li class="nav-item" role="none"><a class="nav-link" href="#home" role="menuitem" tabindex="0">Home</a></li>
+                        <li class="nav-item" role="none"><a class="nav-link" href="#about" role="menuitem" tabindex="0">About</a></li>
+                        <li class="nav-item" role="none"><a class="nav-link" href="#skills" role="menuitem" tabindex="0">Skills</a></li>
+                        <li class="nav-item" role="none"><a class="nav-link" href="#resume" role="menuitem" tabindex="0">Resume</a></li>
 						<!-- <li><a href="#works">Works</a></li> -->
 						<!-- <li><a href="#blog">Blog</a></li> -->
             <!-- <li><a href="#contact">Contact</a></li> -->
@@ -140,24 +142,24 @@
 
 
   <!-- About Section -->
-  <section id="about" class="about-section section-padding">
+  <section id="about" class="about-section section-padding" role="main" aria-labelledby="about-title">
     <div class="container">
-      <h2 class="section-title wow fadeInUp" data-lang="about-title">About Me</h2>
+      <h2 id="about-title" class="section-title wow fadeInUp" data-lang="about-title">About Me</h2>
       <div class="row">
         <div class="col-md-4 order-md-2">
-          <div class="biography">
+          <div class="biography" role="complementary" aria-label="Información personal">
             <div class="myphoto">
-              <img src="assets/images/myphoto.jpg" alt="">
+              <img src="assets/images/myphoto.jpg" alt="Foto de perfil de Nestor Fleitas, consultor DevOps y DevSecOps especializado en infraestructura en la nube">
             </div>
-            <ul>
+            <ul aria-label="Datos personales">
               <li><strong data-lang="name">Name:</strong> Nestor Fleitas</li>
               <li><strong data-lang="dob">Date of Birth:</strong> 14/06/1985</li>
               <li><strong data-lang="address">Address:</strong> Chubut - Argentina</li>
               <li><strong data-lang="nationality">Nationality:</strong> Argentinian</li>
               <li>
                 <strong data-lang="phone">Phone:</strong>
-                <a id="whatsapp-link" class="btn btn-success btn-sm" target="_blank" rel="noopener">
-                  <i class="fa fa-whatsapp"></i> <span data-lang="whatsapp-contact">Contactarme por WhatsApp</span>
+                <a id="whatsapp-link" class="btn btn-success btn-sm" target="_blank" rel="noopener" aria-label="Contactarme por WhatsApp">
+                  <i class="fa fa-whatsapp" aria-hidden="true"></i> <span data-lang="whatsapp-contact">Contactarme por WhatsApp</span>
                 </a>
               </li>
               <li>
@@ -177,7 +179,7 @@
           </div>
           <div class="short-info wow fadeInUp">
             <h3 data-lang="skills">Skills</h3>
-            <ul class="list-check">
+            <ul class="list-check" aria-label="Lista de habilidades principales">
               <li data-lang="skill1">DevSecOps</li>
               <li data-lang="skill2">Cloud Architect (AWS, GCP)</li>
               <li data-lang="skill3">CI/CD Pipeline Automation</li>
@@ -188,7 +190,7 @@
           </div>
           <div class="short-info wow fadeInUp">
             <h3 data-lang="tools">Tools and Technologies</h3>
-            <ul class="list-check">
+            <ul class="list-check" aria-label="Lista de herramientas y tecnologías">
               <li>Docker, Kubernetes, Terraform</li>
               <li>Jenkins, Gitlab CI</li>
               <li>AWS, GCP</li>
@@ -203,10 +205,10 @@
               <li>Weblogic / Nginx /Tomcat / Jboss</li>
             </ul>
           </div>
-          <div class="download-button">
-            <a id="email-btn" class="btn btn-info btn-lg" href="#"><i class="fa fa-paper-plane"></i><span data-lang="send-email">Send me an email</span></a>
-            <a class="btn btn-primary btn-lg" href="assets/cv.pdf" download><i class="fa fa-download"></i><span data-lang="download-cv">Download my CV</span></a>
-            <a class="btn btn-primary btn-lg" href="assets/cvIngles.pdf" download><i class="fa fa-download"></i><span data-lang="download-resume">Download my Resume</span></a>
+          <div class="download-button" role="group" aria-label="Botones de contacto y descarga">
+            <a id="email-btn" class="btn btn-info btn-lg" href="#" aria-label="Enviarme un email"><i class="fa fa-paper-plane" aria-hidden="true"></i><span data-lang="send-email">Send me an email</span></a>
+            <a class="btn btn-primary btn-lg" href="assets/cv.pdf" download aria-label="Descargar mi CV en español"><i class="fa fa-download" aria-hidden="true"></i><span data-lang="download-cv">Download my CV</span></a>
+            <a class="btn btn-primary btn-lg" href="assets/cvIngles.pdf" download aria-label="Descargar mi Resume en inglés"><i class="fa fa-download" aria-hidden="true"></i><span data-lang="download-resume">Download my Resume</span></a>
           </div>
         </div>
       </div>
@@ -215,23 +217,23 @@
   <!-- End About Section -->
   
   <!-- Certifications Section -->
-  <section id="certifications" class="section-padding">
+  <section id="certifications" class="section-padding" role="region" aria-labelledby="cert-title">
     <div class="container">
-      <h2 class="section-title wow fadeInUp">Certificaciones</h2>
+      <h2 id="cert-title" class="section-title wow fadeInUp">Certificaciones</h2>
       <!-- Fallback SEO-first list (visible sin JS) -->
-      <ul id="cert-fallback">
+      <ul id="cert-fallback" aria-label="Lista de certificaciones">
         <li>Amazon Web Services — AWS Certified Cloud Practitioner</li>
         <li>Practical DevSecOps — Certified DevSecOps Professional</li>
         <li>Cybersec Technician</li>
       </ul>
 
       <!-- Carousel: se pobla vía manifest si existe -->
-      <div id="cert-carousel" class="carousel slide cert-carousel" data-bs-ride="carousel" data-bs-interval="4000" aria-roledescription="carousel">
+      <div id="cert-carousel" class="carousel slide cert-carousel" data-bs-ride="carousel" data-bs-interval="4000" role="region" aria-roledescription="carrusel" aria-label="Certificaciones profesionales">
         <div class="carousel-inner" id="cert-carousel-inner"></div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#cert-carousel" data-bs-slide="prev" aria-label="Anterior">
+        <button class="carousel-control-prev" type="button" data-bs-target="#cert-carousel" data-bs-slide="prev" aria-label="Certificación anterior">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#cert-carousel" data-bs-slide="next" aria-label="Siguiente">
+        <button class="carousel-control-next" type="button" data-bs-target="#cert-carousel" data-bs-slide="next" aria-label="Certificación siguiente">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
         </button>
       </div>
@@ -240,23 +242,23 @@
   <!-- End Certifications Section -->
   
   <!-- Projects Section -->
-  <section id="projects" class="projects-section section-padding">
+  <section id="projects" class="projects-section section-padding" role="region" aria-labelledby="projects-title">
     <div class="container">
-      <h2 class="section-title wow fadeInUp">Proyectos Destacados</h2>
-      <div class="row">
-        <div class="col-md-4">
+      <h2 id="projects-title" class="section-title wow fadeInUp">Proyectos Destacados</h2>
+      <div class="row" role="list" aria-label="Lista de proyectos destacados">
+        <div class="col-md-4" role="listitem">
           <div class="project-item">
             <h3>Automatización CI/CD</h3>
             <p>Implementación de pipelines de integración continua utilizando Jenkins y GitLab CI para despliegue automático en AWS.</p>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" role="listitem">
           <div class="project-item">
             <h3>Infraestructura Segura en la Nube</h3>
             <p>Despliegue de microservicios seguros en AWS y Kubernetes, integrando prácticas de DevSecOps y auditorías de seguridad.</p>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" role="listitem">
           <div class="project-item">
             <h3>Monitorización con Wazuh</h3>
             <p>Implementación de un SOC utilizando Wazuh para monitorear amenazas en infraestructuras locales y en la nube.</p>
@@ -854,7 +856,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="resume-title">
-                        <h3>Historia Laboral</h3>
+                        <h2>Historia Laboral</h2>
                     </div>
                     <div class="resume">
                         <ul class="timeline">
@@ -897,7 +899,7 @@
       <div class="timeline-content">
           <div class="timeline-heading">
               <h3>CLARIN - AGEA
-              <img src="assets/images/clarin.png" alt="Responsive image" style="width: 25%" class="img-thumbnail">
+              <img src="assets/images/clarin.png" alt="Logo de Clarín" style="width: 25%" class="img-thumbnail">
               </h3>
               <h5>Data & Cloud Engineer</h5>
               
@@ -953,7 +955,7 @@
       <div class="timeline-content">
           <div class="timeline-heading">
               <h3>FLUX IT
-              <img src="assets/images/logo-FluxIT.png" alt="Responsive image" style="width: 25%" class="img-thumbnail">
+              <img src="assets/images/logo-FluxIT.png" alt="Logo de Flux IT" style="width: 25%" class="img-thumbnail">
               </h3>
               <h5>DEVOPS MOBILE</h5>
               
@@ -1008,7 +1010,7 @@
                                     <div class="timeline-content">
                                         <div class="timeline-heading">
                                             <h3>Telecom
-                                            <img src="assets/images/telecom.png" alt="Responsive image" style="width: 25%" class="img-thumbnail">
+                                            <img src="assets/images/telecom.png" alt="Logo de Telecom Argentina" style="width: 25%" class="img-thumbnail">
                                             </h3>
                                             <h5>Desarrollador Java SOA - Area Técnica - Configuration Manager</h5>
                                             <span>Av. Congreso 3924 – Cap. Fed.</span>
@@ -1030,7 +1032,7 @@
                                     <div class="timeline-content">
                                         <div class="timeline-heading">
                                             <h3>HSBC
-                                            <img src="assets/images/hsbc-logo-320x150.png" alt="Responsive image" style="width: 10%" class="img-thumbnail">
+                                            <img src="assets/images/hsbc-logo-320x150.png" alt="Logo de HSBC" style="width: 10%" class="img-thumbnail">
                                             </h3>
                                             <h5>Analista desarrollador Java Sr Middleware </h5>
                                             <span>Av. Martin Garcia 464 – Cap. Fed.</span>
@@ -1052,7 +1054,7 @@
                                     <div class="timeline-content">
                                         <div class="timeline-heading">
                                             <h3>Banco Credicoop
-                                            <img src="assets/images/Logo-banco-Credicoop.jpg" alt="Responsive image" style="width: 10%" class="img-thumbnail">
+                                            <img src="assets/images/Logo-banco-Credicoop.jpg" alt="Logo del Banco Credicoop" style="width: 10%" class="img-thumbnail">
                                             </h3>
                                             <h5>Analista desarrollador Java Ssr en Area de Arquitectura</h5>
                                             <span>Maipu 66 – Cap. Fed.</span>
@@ -1074,8 +1076,8 @@
                                     <div class="timeline-content">
                                         <div class="timeline-heading">
                                             <h3>Telefonica-Movistar
-                                            <img src="assets/images/telefonica.png" alt="Responsive image" style="width: 10%" class="img-thumbnail">
-                                            <img src="assets/images/MovistarGreen.png" alt="Responsive image" style="width: 10%" class="img-thumbnail">
+                                            <img src="assets/images/telefonica.png" alt="Logo de Telefónica" style="width: 10%" class="img-thumbnail">
+                                            <img src="assets/images/MovistarGreen.png" alt="Logo de Movistar" style="width: 10%" class="img-thumbnail">
                                             </h3>
                                             <h5>Consultor JAVA SOA – OSB </h5>
                                             <span>San Martin 550 – Cap. Fed.</span>
@@ -1143,7 +1145,7 @@
                                     <div class="timeline-content">
                                         <div class="timeline-heading">
                                             <h3>Accenture S.A.
-                                            <img src="assets/images/accenture.png" alt="Responsive image" style="width: 10%" class="img-thumbnail">
+                                            <img src="assets/images/accenture.png" alt="Logo de Accenture" style="width: 10%" class="img-thumbnail">
                                             </h3>
                                             <h5>Desarrollador Cobol</h5>
                                             <span>Av. Santa Fe 1047 – Rosario (Sta. Fe)</span>
@@ -1165,7 +1167,7 @@
                                     <div class="timeline-content">
                                         <div class="timeline-heading">
                                             <h3>TGV Excelencia en Soluciones Informáticas S.A.
-                                            <img src="assets/images/TGV-Logo-sin-slogan.png" alt="Responsive image" style="width: 10%" class="img-thumbnail">
+                                            <img src="assets/images/TGV-Logo-sin-slogan.png" alt="Logo de TGV" style="width: 10%" class="img-thumbnail">
                                             </h3>
                                             <h5>Desarrollador Java </h5>
                                             <span>Av. Rivadavia 413 6º - Capital Federal</span>
@@ -1186,7 +1188,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="resume-title">
-                        <h3>Formación Académica</h3>
+                        <h2>Formación Académica</h2>
                     </div>
                     <div class="resume">
                         <ul class="timeline">
@@ -1445,6 +1447,48 @@
       var msg = encodeURIComponent('Hola Néstor, te contacto desde tu portfolio.');
       var wa = 'https://wa.me/' + full + '?text=' + msg;
       var w = document.getElementById('whatsapp-link'); if(w){ w.setAttribute('href', wa); }
+    })();
+  </script>
+  <script>
+    // Language switching with HTML lang attribute update
+    (function(){
+      var htmlRoot = document.getElementById('html-root');
+      var flagEs = document.getElementById('flag-es');
+      var flagEn = document.getElementById('flag-en');
+      
+      if (flagEs) {
+        flagEs.addEventListener('click', function() {
+          htmlRoot.setAttribute('lang', 'es');
+          // Trigger language change event for other scripts
+          if (typeof changeLanguage === 'function') {
+            changeLanguage('es');
+          }
+        });
+        
+        flagEs.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            flagEs.click();
+          }
+        });
+      }
+      
+      if (flagEn) {
+        flagEn.addEventListener('click', function() {
+          htmlRoot.setAttribute('lang', 'en');
+          // Trigger language change event for other scripts
+          if (typeof changeLanguage === 'function') {
+            changeLanguage('en');
+          }
+        });
+        
+        flagEn.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            flagEn.click();
+          }
+        });
+      }
     })();
   </script>
 </body>

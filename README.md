@@ -10,3 +10,4 @@ TODO:
 	- Agregar extracto de codigo de cv viejo para medir visitas
 	- Armar un cv en español y otro en ingles - LISTO
 	- Agregar SEO - LISTO
+	- Agregar experiencias vividas logros etcen cada trabajo que tuve
