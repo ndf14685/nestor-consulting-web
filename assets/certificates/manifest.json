@@ -53,7 +53,7 @@
     "issuer": "Ekoparty hHackademy",
     "date": "2024-11-24",
     "logo": "Hackademy.png",
-    "url": "https://www.credly.com/badges/dd1d8f1d-a0ad-4bfa-aacb-dc4da95480b5/linked_in_profile"
+    "file": "pdfs/NestorFleitas_FOHD.pdf"
   },
   {
     "id": "Osint-hack",
@@ -61,7 +61,7 @@
     "issuer": "Ekoparty hHackademy",
     "date": "2024-10-24",
     "logo": "Hackademy.png",
-    "url": "https://www.credly.com/badges/dd1d8f1d-a0ad-4bfa-aacb-dc4da95480b5/linked_in_profile"
+    "file": "pdfs/NestorFleitas_osint.pdf"
   },
   {
     "id": "devsecops-professional",
@@ -69,7 +69,7 @@
     "issuer": "Practical DevSecOps",
     "date": "2024-01-15",
     "logo": "Hackademy.png",
-    "url": "https://verify.example.com/TU-CERTIFICADO"
+    "file": "pdfs/NestorFleitas-DSO-CS.pdf"
   }
 ]
 
