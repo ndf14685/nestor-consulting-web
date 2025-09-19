@@ -25,12 +25,12 @@
     var aImg = document.createElement('a');
     aImg.className = 'image-link thumb d-inline-block';
     
-    if(item.preview) {
+    if(item.preview || item.file) {
       // Secure preview system
       aImg.href = '#';
       aImg.setAttribute('aria-label', 'Ver preview del certificado — ' + captionText);
       aImg.classList.add('secure-certificate');
-      aImg.setAttribute('data-preview', 'assets/certificates/' + item.preview);
+      aImg.setAttribute('data-preview', 'assets/certificates/' + (item.preview || item.file));
       aImg.setAttribute('data-cert-name', item.name);
       
       // Prevent default click behavior
@@ -55,13 +55,13 @@
     if(item.issuer){ cap.appendChild(p); }
 
     // Action buttons
-    if(item.preview){
+    if(item.preview || item.file){
       // Secure certificate with preview
       var previewBtn = document.createElement('a');
       previewBtn.href = '#';
       previewBtn.className = 'btn btn-primary btn-sm preview-cert';
       previewBtn.innerHTML = '<i class="fa fa-eye" aria-hidden="true"></i> Preview';
-      previewBtn.setAttribute('data-preview', 'assets/certificates/' + item.preview);
+      previewBtn.setAttribute('data-preview', 'assets/certificates/' + (item.preview || item.file));
       previewBtn.setAttribute('data-cert-name', item.name);
       previewBtn.addEventListener('click', function(e) {
         e.preventDefault();
@@ -125,10 +125,9 @@
     preview.innerHTML = '<div class="preview-content">' +
       '<div class="preview-header">' +
         '<h5>' + certName + '</h5>' +
-        '<small>Preview • Click para solicitar certificado completo</small>' +
+        '<small>Click para solicitar certificado completo</small>' +
       '</div>' +
       '<img src="' + previewUrl + '" alt="Preview de ' + certName + '" loading="lazy">' +
-      '<div class="preview-watermark">PREVIEW</div>' +
     '</div>';
     
     document.body.appendChild(preview);
@@ -171,9 +170,8 @@
       '</div>' +
       '<div class="modal-body">' +
         '<img src="' + previewUrl + '" alt="Preview de ' + certName + '" loading="lazy">' +
-        '<div class="preview-watermark">PREVIEW</div>' +
         '<p class="text-center mt-3">' +
-          '<small>Esta es una vista previa. Para obtener el certificado completo, ' +
+          '<small>Para obtener el certificado completo, ' +
           '<a href="#" onclick="showContactModal(\'' + certName + '\'); return false;">contáctame</a>.</small>' +
         '</p>' +
       '</div>' +

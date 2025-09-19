@@ -1668,21 +1668,6 @@ Icon for all respective meta
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.certificate-preview-overlay .preview-watermark {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg);
-    background: rgba(220, 53, 69, 0.8);
-    color: white;
-    padding: 8px 16px;
-    font-weight: bold;
-    font-size: 18px;
-    border-radius: 4px;
-    pointer-events: none;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
-}
-
 /* Modal styles */
 .certificate-modal-overlay {
     position: fixed;
@@ -1749,21 +1734,6 @@ Icon for all respective meta
     box-shadow: 0 4px 16px rgba(0,0,0,0.1);
 }
 
-.certificate-modal .preview-watermark {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg);
-    background: rgba(220, 53, 69, 0.9);
-    color: white;
-    padding: 12px 24px;
-    font-weight: bold;
-    font-size: 24px;
-    border-radius: 4px;
-    pointer-events: none;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-}
-
 /* Dark theme support */
 body.dark .certificate-preview-overlay {
     background: #2a2a2a;
@@ -1811,16 +1781,6 @@ body.dark .certificate-modal .modal-close:hover {
     .certificate-modal {
         margin: 10px;
         max-width: calc(100% - 20px);
-    }
-    
-    .certificate-preview-overlay .preview-watermark {
-        font-size: 14px;
-        padding: 6px 12px;
-    }
-    
-    .certificate-modal .preview-watermark {
-        font-size: 20px;
-        padding: 10px 20px;
     }
 }
 
