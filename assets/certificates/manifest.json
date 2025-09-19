@@ -53,7 +53,7 @@
     "issuer": "Ekoparty hHackademy",
     "date": "2024-11-24",
     "logo": "Hackademy.png",
-    "file": "pdfs/NestorFleitas_FOHD.pdf"
+    "file": "previews/NestorFleitas_FOHD.png"
   },
   {
     "id": "Osint-hack",
@@ -61,15 +61,40 @@
     "issuer": "Ekoparty hHackademy",
     "date": "2024-10-24",
     "logo": "Hackademy.png",
-    "file": "pdfs/NestorFleitas_osint.pdf"
+    "preview": "previews/NestorFleitas_osint.png"
   },
   {
     "id": "devsecops-professional",
     "name": "Certified DevSecOps Professional",
     "issuer": "Practical DevSecOps",
-    "date": "2024-01-15",
+    "date": "2022-12-15",
     "logo": "Hackademy.png",
-    "file": "pdfs/NestorFleitas-DSO-CS.pdf"
+    "preview": "previews/NestorFleitas-DSO-CS.png"
+  },
+  {
+    "id": "datascience",
+    "name": "Diplomatura en Data Science",
+    "issuer": "Mundo SE",
+    "date": "2023-08-14",
+    "logo": "datascience.png",
+    "url": "https://certificados.mundose.com/?i=bW9kZT1QREYmcmVjb3JkPTM5eDE2NzE4NTQ="
+  },
+  {
+    "id": "devsecops-professional",
+    "name": "Certified DevSecOps Professional",
+    "issuer": "Practical DevSecOps",
+    "date": "2022-12-15",
+    "logo": "Hackademy.png",
+    "preview": "previews/NestorFleitas-DSO-CS.png"
+  },
+  {
+    "id": "devops",
+    "name": "Diplomatura en DevOps",
+    "issuer": "Mundo SE",
+    "date": "2022-06-07",
+    "logo": "DevOps.png",
+    "url": "https://certificados.mundose.com/?i=bW9kZT1QREYmcmVjb3JkPTM5eDEyMTYwMzI="
   }
+
 ]
 
