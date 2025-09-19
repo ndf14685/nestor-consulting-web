@@ -1095,6 +1095,56 @@ Resume Timeline
     margin-top: 20px;
 }
 
+/* === Skills Category Styles === */
+.skill-category-section {
+    border-bottom: 1px solid #3a4149;
+    padding-bottom: 40px;
+}
+
+.skill-category-title {
+    color: #68c3a3;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.skill-category-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background-color: #68c3a3;
+}
+
+.skill-category-section .skill-title h4 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: -6px;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+/* Dark theme adjustments for skill categories */
+body.dark .skill-category-section {
+    border-bottom-color: #2a3040;
+}
+
+body.dark .skill-category-title {
+    color: #68c3a3;
+}
+
+body.dark .skill-category-section .skill-title h4 {
+    color: #e2e8f0;
+}
+
 /*.percent:after {content: '%';margin-left: 0.1em;font-size: .8em;}*/
 .angular{margin-top:100px;}
 .angular .chart {margin-top:0;}
