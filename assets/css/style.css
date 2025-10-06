@@ -859,6 +859,15 @@ Resume Timeline
     position: relative;
 }
 
+/* Fix content alignment - keep content left-aligned but panel positioning intact */
+.timeline>li .timeline-panel .timeline-content {
+    text-align: left;
+}
+
+.timeline>li.timeline-inverted .timeline-panel .timeline-content {
+    text-align: left;
+}
+
 .timeline-content{
     position: relative;
     padding: 24px;
@@ -976,6 +985,266 @@ Resume Timeline
 
 .resume-section, .month{
     background: #cacaca;
+}
+
+/* Experience Highlights Lists */
+.experience-highlights {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+.experience-highlights li {
+    padding: 8px 0;
+    border-left: 3px solid #68c3a3;
+    padding-left: 15px;
+    margin-bottom: 8px;
+    background: rgba(104, 195, 163, 0.1);
+    border-radius: 0 4px 4px 0;
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+.experience-highlights li:hover {
+    background: rgba(104, 195, 163, 0.2);
+    transform: translateX(5px);
+}
+
+.experience-highlights li strong {
+    color: #68c3a3;
+    font-weight: 600;
+}
+
+/* Styles when timeline content is hovered */
+.timeline-content:hover .experience-highlights li {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border-left-color: #fff !important;
+    color: #fff !important;
+}
+
+.timeline-content:hover .experience-highlights li strong {
+    color: #fff !important;
+}
+
+.timeline-content:hover .experience-highlights li:hover {
+    background: rgba(255, 255, 255, 0.3) !important;
+    transform: translateX(5px);
+}
+
+/* Dark theme support for experience highlights */
+body.dark .experience-highlights li {
+    background: rgba(104, 195, 163, 0.15);
+    color: #e2e8f0;
+}
+
+body.dark .experience-highlights li:hover {
+    background: rgba(104, 195, 163, 0.25);
+}
+
+body.dark .experience-highlights li strong {
+    color: #68c3a3;
+}
+
+/* Dark theme with timeline hover */
+body.dark .timeline-content:hover .experience-highlights li {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-left-color: #fff !important;
+    color: #fff !important;
+}
+
+body.dark .timeline-content:hover .experience-highlights li strong {
+    color: #fff !important;
+}
+
+body.dark .timeline-content:hover .experience-highlights li:hover {
+    background: rgba(255, 255, 255, 0.25) !important;
+}
+
+/* Section Divider Styles */
+.section-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 60px 0 40px;
+    position: relative;
+}
+
+.divider-line {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #68c3a3, transparent);
+    opacity: 0.6;
+}
+
+.divider-icon {
+    margin: 0 30px;
+    font-size: 32px;
+    color: #68c3a3;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(104, 195, 163, 0.3);
+    border: 3px solid #68c3a3;
+}
+
+/* Education Section Styles */
+.education-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.education-title h2 {
+    color: #2c3e50;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.education-title h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #68c3a3;
+    border-radius: 2px;
+}
+
+.education-section {
+    padding: 20px 0;
+}
+
+.education-item {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    border-top: 4px solid #68c3a3;
+    transition: all 0.3s ease;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.education-item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #68c3a3 0%, #52b3d9 100%);
+    transition: height 0.3s ease;
+}
+
+.education-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(104, 195, 163, 0.15);
+}
+
+.education-item:hover:before {
+    height: 100%;
+    opacity: 0.05;
+}
+
+.education-year {
+    background: rgba(104, 195, 163, 0.1);
+    color: #68c3a3;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.education-content h3 {
+    color: #2c3e50;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.education-content h5 {
+    color: #68c3a3;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: none;
+}
+
+.education-status {
+    color: #666;
+    font-size: 14px;
+    font-style: italic;
+    margin: 0;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+/* Dark theme support for education section */
+body.dark .section-divider .divider-icon {
+    background: #1a1e23;
+    color: #68c3a3;
+}
+
+body.dark .education-title h2 {
+    color: #e2e8f0;
+}
+
+body.dark .education-item {
+    background: #2a2a2a;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+body.dark .education-item:hover {
+    box-shadow: 0 15px 35px rgba(104, 195, 163, 0.2);
+}
+
+body.dark .education-content h3 {
+    color: #e2e8f0;
+}
+
+body.dark .education-content h5 {
+    color: #68c3a3;
+}
+
+body.dark .education-status {
+    color: #cbd5e0;
+    border-top-color: #444;
+}
+
+/* Responsive adjustments for education section */
+@media (max-width: 768px) {
+    .section-divider {
+        margin: 40px 0 30px;
+    }
+    
+    .divider-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        margin: 0 20px;
+    }
+    
+    .education-item {
+        margin-bottom: 20px;
+        padding: 25px 20px;
+    }
+    
+    .education-content h3 {
+        font-size: 18px;
+    }
 }
 
 
